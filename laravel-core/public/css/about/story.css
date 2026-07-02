@@ -1,0 +1,125 @@
+/* ===========================
+   ABOUT STORY SECTION
+=========================== */
+.about-story {
+    padding: 100px 0;
+    background: var(--clr-surface);
+    position: relative;
+    border-top: 1px solid var(--clr-border);
+    border-bottom: 1px solid var(--clr-border);
+}
+
+.about-story-grid {
+    display: grid;
+    grid-template-columns: 1.12fr 1fr;
+    gap: 72px;
+    align-items: center;
+}
+
+.about-story-media {
+    position: relative;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-story-image-card {
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--clr-border);
+    overflow: hidden;
+    position: absolute;
+    box-shadow: var(--shadow-card);
+}
+
+.about-story-image-card.main-card {
+    width: 82%;
+    height: 90%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(135deg, var(--clr-surface-2), var(--clr-surface-3));
+    display: flex;
+    align-items: flex-end;
+    padding: 24px;
+}
+
+.image-overlay-text {
+    position: relative;
+    z-index: 2;
+}
+
+.location-icon {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.image-overlay-text h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.about-story-image-card.accent-card {
+    width: 45%;
+    height: 48%;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--clr-accent), #ef4444);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    animation: floatAccentCard 6s ease-in-out infinite alternate;
+}
+
+@keyframes floatAccentCard {
+    from { transform: translateY(0); }
+    to { transform: translateY(-12px); }
+}
+
+.accent-badge {
+    text-align: center;
+    color: #0d0d0d;
+}
+
+.accent-number {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 850;
+    line-height: 1;
+}
+
+.accent-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.about-story-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.story-paragraph {
+    color: var(--clr-text-muted);
+    font-size: 1.02rem;
+    line-height: 1.8;
+}
+
+@media (max-width: 992px) {
+    .about-story-grid {
+        grid-template-columns: 1fr;
+        gap: 56px;
+    }
+    
+    .about-story-media {
+        height: 360px;
+        max-width: 500px;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
