@@ -1,9 +1,0 @@
-/* ===================================================
-   HOME PAGE — Main CSS Entry Point
-   Imports all section stylesheets
-=================================================== */
-@import 'hero.css';
-@import 'features.css';
-@import 'offers.css';
-@import 'gallery.css';
-@import 'testimonials.css';
